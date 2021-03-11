@@ -5,10 +5,6 @@ jobs:
    runs-on: ubuntu-latest 
    steps: 
    - uses: actions/checkout@v1 
-   - name: Run make4ht 
-     uses: docker://michalh21/make4ht-docker:latest 
-     env: 
-       command: "make4ht -x -u -d out resume.tex" 
    - name: Publish the web pages 
      uses: peaceiris/actions-gh-pages@v2.5.0 
      env: 
